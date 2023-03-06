@@ -1,0 +1,303 @@
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* css variables */
+:root {
+  --navbar-height: 59px;
+}
+/* navbar style */
+#navbar {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+}
+/* logo and image of navigation */
+#logo {
+  margin: 10px 30px;
+}
+#logo img {
+  /* width: 54px; */
+  height: 59px;
+  border-radius: 50%;
+  margin: 3px 6px;
+}
+#logo img:hover{
+  box-shadow: 2px 4px 2px 3px rgba(241, 247, 245, 0.5);
+  /* border: 2px solid white; */
+}
+#navbar ul {
+  display: flex;
+}
+#navbar ul li {
+  /* color:white; */
+  list-style: none;
+  font-size: 1.3rem;
+}
+#navbar ul li a {
+  color: white;
+  display: block;
+  padding: 3px 23px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+#navbar::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity:0.7;
+}
+#navbar ul li a:hover {
+  color: black;
+  background-color: aliceblue;
+  border-radius: 10px;
+  text-shadow: 2px 0px darkgray;
+}
+/* home section */
+#home {
+  display: flex;
+  flex-direction: column;
+  padding: 3px 200px;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+}
+#home::before {
+  content: "";
+  background: url("/IMG/background\ 1.jpg") no-repeat center center/cover;
+  position: absolute;
+  left: 0;
+  height: 642px;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.9;
+  top: 0px;
+}
+/* services section */
+#services {
+  display: flex;
+  margin-top: 4px;
+  padding-bottom: 20px;
+
+}
+/* .services-container{
+  position: relative;
+  margin: 0px;
+} */
+#services .box {
+  border: 2px solid brown;
+  margin: 4px;
+  padding: 34px;
+  border-radius: 23px;
+  background-color: antiquewhite;
+  width: 500px;
+  height: 450px;
+  align-items: center;
+  justify-content: center;
+}
+#services .box img{
+  height: 160px;
+  margin: auto;
+  display: block;
+  border-radius: 50%;
+  width: 158px;
+}
+#services .box img:hover{
+    border: 2px solid white;
+
+}
+/* clients section */
+    #client{
+      position: relative;
+    }
+    #client::before{
+      content: "";
+      position: absolute;
+      background: url("/IMG/preview-image.avif");
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.3;
+    }
+    #clients{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .clients-logo{
+      padding: 34px;
+    }
+    .clients-logo img{
+      height: 50px;
+      border-radius: 50%;
+    }
+    .clients-logo img:hover{
+      box-shadow: 2px 2px 2px 2px rgba(2, 253, 170, 0.5);
+    }
+/* contact section */
+#contact{
+  position: relative;
+}
+#contact::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.9;
+  background: url("/IMG/contact\ us.jpg") no-repeat center center/cover;
+}
+#contact-box input,#contact-box textarea{
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+#contact-box form{
+  width: 50%;
+}
+#contact-box label{
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-style: italic;
+}
+#contact-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 34px;
+}
+footer{
+  background-color: black;
+  color: white;
+  padding: 2px 12px;
+}
+
+
+/* utility class */
+.h-primary {
+  font-size: 2.5rem;
+  padding: 12px;
+  position: relative;
+  margin-top: 5px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.h-secondary {
+  font-size: 1.5rem;
+  padding: 12px;
+  font-style: italic;
+}
+#home h1 {
+  color: white;
+  text-align: center;
+}
+#home p {
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.btn {
+  color: white;
+  padding: 11px 40px;
+  background-color: brown;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: bolder;
+  margin: 10px;
+  cursor: pointer;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+    text-shadow: 2px 0px gray;
+    
+}
+.btn:active{
+  background-color: chartreuse;
+  color: black;
+  text-shadow: 2px 0px gray;
+  
+}
+.btn:visited{
+  background-color: yellow;
+  color: black;
+  text-shadow: 2px 0px gray;
+  }
+.center {
+  text-align: center;
+}
+#services p{
+    text-align: justify;
+}
+
+/* making website phone enable */
+@media screen and (max-width:1000px) {
+  body{
+    background-color:#e7f5f3;
+  }
+  /* for navigation */
+  #navbar{
+    flex-direction: column;
+  }
+  #navbar ul li a{
+    font-size: 1rem;
+    padding: 0px 7px;
+    padding-bottom: 8px;
+  }
+  /* for home section */
+  #home{
+    height: 370px;
+    padding: 3px 28px;
+  }
+  #home::before{
+    height: 480px;
+  }
+  #home p{
+    font-size: 13px;
+  }
+  /* for services section */
+  #services{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #services .box{
+    padding: 14px;
+    margin: 2px 0px;
+    margin-bottom: 20px;
+  }
+  /* for client section */
+  #clients{
+    flex-wrap: wrap;
+  }
+  #clients img{
+    width: 66px;
+    height: auto;
+    padding: 6px;
+  
+  }
+  #client::before{
+    opacity: 1.3;
+  }
+  /* for contact section */
+  #contact-box form{
+    width: 80%;
+  }
+  /* for utility class */
+  .h-primary{
+    font-size: 26px;
+  }
+  .btn{
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+}
