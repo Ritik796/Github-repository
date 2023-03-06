@@ -86,6 +86,8 @@
   display: flex;
   margin-top: 4px;
   padding-bottom: 20px;
+  align-items: center;
+  justify-content: center;
 
 }
 /* .services-container{
@@ -100,8 +102,7 @@
   background-color: antiquewhite;
   width: 500px;
   height: 450px;
-  align-items: center;
-  justify-content: center;
+ 
 }
 #services .box img{
   height: 160px;
